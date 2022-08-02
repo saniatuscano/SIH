@@ -3,13 +3,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Header from './components/Header';
 import PlaceToVisit from './components/PlaceToVisit';
+import Info from './components/Info';
+import About from './components/About';
+import Top from './components/Top';
+import TopCard from './components/TopCard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
-    backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/bg.jpg'})`,
+    background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${process.env.PUBLIC_URL + '/assets/bgd.jpg'})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
+    backgroundSize: 'cover'
   },
 }));
 export default function App() {
@@ -19,6 +23,9 @@ export default function App() {
       <CssBaseline />
       <Header />
       <PlaceToVisit />
+      <Info/>
+      <About/>
+      <TopCard/>
     </div>
   );
 }

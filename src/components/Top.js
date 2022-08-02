@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor:'white',
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
     },
@@ -18,7 +19,7 @@ export default function () {
   const classes = useStyles();
   const checked = useWindowPosition('header');
   return (
-    <div className={classes.root} id="place-to-visit">
+    <div className={classes.root} >
       <ImageCard place={places[1]} checked={checked} />
       <ImageCard place={places[0]} checked={checked} />
       <ImageCard place={places[1]} checked={checked} />
